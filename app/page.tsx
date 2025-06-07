@@ -164,7 +164,7 @@ export default function Portfolio() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-white text-sm font-semibold">Canadian Tire</h3>
+                  <h3 className="text-white text-sm font-semibold">Canadian Tire Financial Services</h3>
                   <p className="text-xs text-cyan-400 mb-1">Software Engineer</p>
                   <p className="text-xs text-gray-500 mb-1">May 2022 - Aug 2022</p>
                   <p className="text-xs">Developed scalable web applications using React and Node.js.</p>
