@@ -6,7 +6,7 @@ import { GlowCapture, Glow } from "@codaworks/react-glow"
 
 export default function Portfolio() {
   return (
-    <div className="h-screen bg-black relative overflow-auto flex flex-col">
+    <div className="h-screen bg-[#1a1a1a] relative overflow-auto flex flex-col">
       {/* Polka dot background */}
       <div
         className="absolute inset-0 opacity-10"
@@ -19,15 +19,11 @@ export default function Portfolio() {
       <div className="relative z-10 container mx-auto px-4 py-6 flex flex-col h-full">
         {/* Header */}
         <div className="flex items-center justify-center mb-6">
-          <div className="mr-4">
-            <Image
-              src="/placeholder.svg?height=80&width=80"
-              alt="Bitmoji"
-              width={80}
-              height={80}
-              className="rounded-full border-2 border-purple-500"
-            />
-          </div>
+        <div className="mr-5 relative">
+              <div className="w-[90px] h-[90px] rounded-full bg-gradient-to-br from-purple-500/30 to-cyan-500/30 backdrop-blur-sm flex items-center justify-center p-1 shadow-lg">
+                <Image src="/memoji.png" alt="Bitmoji" width={200} height={200} className="rounded-full" />
+              </div>
+            </div>
           <div>
             <h1 className="text-3xl font-bold text-white font-mono">Aadi Sanghani</h1>
             <p className="text-cyan-400 font-mono">Software Engineer & Technology Enthusiast</p>
