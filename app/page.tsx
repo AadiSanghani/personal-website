@@ -2,6 +2,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { FileText, Download } from "lucide-react"
+import { GlowCapture, Glow } from "@codaworks/react-glow"
 
 export default function Portfolio() {
   return (
@@ -34,7 +35,7 @@ export default function Portfolio() {
         </div>
 
         {/* Main Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 flex-1">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 flex-1">
           {/* About Section */}
           <div className="group border border-gray-600 rounded-lg p-4 bg-gray-900/50 backdrop-blur-sm transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:border-white/50 flex flex-col">
             <h2 className="text-xl font-bold text-purple-400 mb-2 font-mono">about</h2>
@@ -52,7 +53,7 @@ export default function Portfolio() {
           </div>
 
           {/* Experience Section - Spans two columns */}
-          <div className="group border border-gray-600 rounded-lg p-4 bg-gray-900/50 backdrop-blur-sm transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:border-white/50 lg:col-span-2 flex flex-col">
+          <div className="group border border-gray-600 rounded-lg p-4 bg-gray-900/50 backdrop-blur-sm transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:border-white/50 md:col-span-2 flex flex-col">
           <div className="flex justify-between items-center mb-2">
                 <h2 className="text-xl font-bold text-purple-400 font-mono">experience</h2>
                 <Link
@@ -65,120 +66,134 @@ export default function Portfolio() {
                   <Download className="w-3 h-3 opacity-70 group-hover/btn:opacity-100 transition-opacity" />
                 </Link>
               </div>
-            <div className="text-gray-300 font-mono text-sm flex-1 grid grid-cols-1 lg:grid-cols-2 gap-3 overflow-y-auto pr-1 custom-scrollbar">
-              
-              {/* eBay */}
-              <div className="flex gap-3 bg-white/5 p-3 rounded-lg hover:bg-purple-500/10 transition-all duration-300 border border-transparent hover:border-purple-500/30">
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-purple-500/20 rounded-md flex items-center justify-center">
-                    <Image
-                      src="/ebay.svg"
-                      alt="Company 1 Logo"
-                      width={60}
-                      height={60}
-                      className="opacity-90"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-white text-sm font-semibold">eBay</h3>
-                  <p className="text-xs text-cyan-400 mb-1">Software Engineer</p>
-                  <p className="text-xs text-gray-500 mb-1">May 2025 - Aug 2025</p>
-                  <p className="text-xs">Developed scalable web applications using React and Node.js.</p>
-                </div>
-              </div>
+            <div className="text-gray-300 font-mono text-sm flex-1 overflow-y-auto pr-1 custom-scrollbar">
+              <GlowCapture>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  
+                  {/* eBay */}
+                  <Glow color="rgb(255, 196, 0)">
+                    <div className="flex gap-3 bg-white/5 p-3 rounded-lg transition-all duration-300 border border-transparent glow:bg-glow/10 glow:border-glow/30">
+                      <div className="flex-shrink-0">
+                        <div className="w-16 h-16 bg-purple-500/20 rounded-md flex items-center justify-center glow:bg-glow/20">
+                          <Image
+                            src="/ebay.svg"
+                            alt="Company 1 Logo"
+                            width={60}
+                            height={60}
+                            className="opacity-90"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-white text-sm font-semibold">eBay</h3>
+                        <p className="text-xs text-cyan-400 mb-1">Software Engineer</p>
+                        <p className="text-xs text-gray-500 mb-1">May 2025 - Aug 2025</p>
+                        <p className="text-xs">Developed scalable web applications using React and Node.js.</p>
+                      </div>
+                    </div>
+                  </Glow>
 
-              {/* Shopify */}
-              <div className="flex gap-3 bg-white/5 p-3 rounded-lg hover:bg-purple-500/10 transition-all duration-300 border border-transparent hover:border-purple-500/30">
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-purple-500/20 rounded-md flex items-center justify-center">
-                    <Image
-                      src="/shopify.svg"
-                      alt="shopify Logo"
-                      width={50}
-                      height={50}
-                      className="opacity-90"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-white text-sm font-semibold">Shopify</h3>
-                  <p className="text-xs text-cyan-400 mb-1">Software Engineer</p>
-                  <p className="text-xs text-gray-500 mb-1">Sept 2024 - April 2025</p>
-                  <p className="text-xs">Developed scalable web applications using React and Node.js.</p>
-                </div>
-              </div>
+                  {/* Shopify */}
+                  <Glow color="rgb(176, 250, 87)">
+                    <div className="flex gap-3 bg-white/5 p-3 rounded-lg transition-all duration-300 border border-transparent glow:bg-glow/10 glow:border-glow/30">
+                      <div className="flex-shrink-0">
+                        <div className="w-16 h-16 bg-purple-500/20 rounded-md flex items-center justify-center glow:bg-glow/20">
+                          <Image
+                            src="/shopify.svg"
+                            alt="shopify Logo"
+                            width={50}
+                            height={50}
+                            className="opacity-90"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-white text-sm font-semibold">Shopify</h3>
+                        <p className="text-xs text-cyan-400 mb-1">Software Engineer</p>
+                        <p className="text-xs text-gray-500 mb-1">Sept 2024 - April 2025</p>
+                        <p className="text-xs">Developed scalable web applications using React and Node.js.</p>
+                      </div>
+                    </div>
+                  </Glow>
 
-              {/* Nasdaq */}
-              <div className="flex gap-3 bg-white/5 p-3 rounded-lg hover:bg-purple-500/10 transition-all duration-300 border border-transparent hover:border-purple-500/30">
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-purple-500/20 rounded-md flex items-center justify-center">
-                    <Image
-                      src="/nasdaq.svg"
-                      alt="Nasdaq Logo"
-                      width={50}
-                      height={50}
-                      className="opacity-90"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-white text-sm font-semibold">Nasdaq</h3>
-                  <p className="text-xs text-cyan-400 mb-1">Software Engineer</p>
-                  <p className="text-xs text-gray-500 mb-1">May 2024 - Aug 2024</p>
-                  <p className="text-xs">Developed scalable web applications using React and Node.js.</p>
-                </div>
-              </div>
+                  {/* Nasdaq */}
+                  <Glow color="rgb(0, 150, 255)">
+                    <div className="flex gap-3 bg-white/5 p-3 rounded-lg transition-all duration-300 border border-transparent glow:bg-glow/10 glow:border-glow/30">
+                      <div className="flex-shrink-0">
+                        <div className="w-16 h-16 bg-purple-500/20 rounded-md flex items-center justify-center glow:bg-glow/20">
+                          <Image
+                            src="/nasdaq.svg"
+                            alt="Nasdaq Logo"
+                            width={50}
+                            height={50}
+                            className="opacity-90"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-white text-sm font-semibold">Nasdaq</h3>
+                        <p className="text-xs text-cyan-400 mb-1">Software Engineer</p>
+                        <p className="text-xs text-gray-500 mb-1">May 2024 - Aug 2024</p>
+                        <p className="text-xs">Developed scalable web applications using React and Node.js.</p>
+                      </div>
+                    </div>
+                  </Glow>
 
-              {/* Interac */}
-              <div className="flex gap-3 bg-white/5 p-3 rounded-lg hover:bg-purple-500/10 transition-all duration-300 border border-transparent hover:border-purple-500/30">
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-purple-500/20 rounded-md flex items-center justify-center">
-                    <Image
-                      src="/interac.svg"
-                      alt="Interac Logo"
-                      width={50}
-                      height={50}
-                      className="opacity-90"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-white text-sm font-semibold">Interac</h3>
-                  <p className="text-xs text-cyan-400 mb-1">Software Engineer</p>
-                  <p className="text-xs text-gray-500 mb-1">May 2023 - Aug 2023</p>
-                  <p className="text-xs">Developed scalable web applications using React and Node.js.</p>
-                </div>
-              </div>
+                  {/* Interac */}
+                  <Glow color="rgb(255, 100, 50)">
+                    <div className="flex gap-3 bg-white/5 p-3 rounded-lg transition-all duration-300 border border-transparent glow:bg-glow/10 glow:border-glow/30">
+                      <div className="flex-shrink-0">
+                        <div className="w-16 h-16 bg-purple-500/20 rounded-md flex items-center justify-center glow:bg-glow/20">
+                          <Image
+                            src="/interac.svg"
+                            alt="Interac Logo"
+                            width={50}
+                            height={50}
+                            className="opacity-90"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-white text-sm font-semibold">Interac</h3>
+                        <p className="text-xs text-cyan-400 mb-1">Software Engineer</p>
+                        <p className="text-xs text-gray-500 mb-1">May 2023 - Aug 2023</p>
+                        <p className="text-xs">Developed scalable web applications using React and Node.js.</p>
+                      </div>
+                    </div>
+                  </Glow>
 
-              {/* Canadian Tire */}
-              <div className="flex gap-3 bg-white/5 p-3 rounded-lg hover:bg-purple-500/10 transition-all duration-300 border border-transparent hover:border-purple-500/30">
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-purple-500/20 rounded-md flex items-center justify-center">
-                    <Image
-                      src="/ctfs.svg"
-                      alt="Canadian Tire Logo"
-                      width={40}
-                      height={40}
-                      className="opacity-90"
-                    />
-                  </div>
+                  {/* Canadian Tire */}
+                  <Glow color="rgb(220, 30, 37)">
+                    <div className="flex gap-3 bg-white/5 p-3 rounded-lg transition-all duration-300 border border-transparent glow:bg-glow/10 glow:border-glow/30">
+                      <div className="flex-shrink-0">
+                        <div className="w-16 h-16 bg-purple-500/20 rounded-md flex items-center justify-center glow:bg-glow/20">
+                          <Image
+                            src="/ctfs.svg"
+                            alt="Canadian Tire Logo"
+                            width={40}
+                            height={40}
+                            className="opacity-90"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-white text-sm font-semibold">Canadian Tire Financial Services</h3>
+                        <p className="text-xs text-cyan-400 mb-1">Software Engineer</p>
+                        <p className="text-xs text-gray-500 mb-1">May 2022 - Aug 2022</p>
+                        <p className="text-xs">Developed scalable web applications using React and Node.js.</p>
+                      </div>
+                    </div>
+                  </Glow>
                 </div>
-                <div>
-                  <h3 className="text-white text-sm font-semibold">Canadian Tire Financial Services</h3>
-                  <p className="text-xs text-cyan-400 mb-1">Software Engineer</p>
-                  <p className="text-xs text-gray-500 mb-1">May 2022 - Aug 2022</p>
-                  <p className="text-xs">Developed scalable web applications using React and Node.js.</p>
-                </div>
-              </div>
+              </GlowCapture>
             </div>
           </div>
 
           {/* Connect Section */}
-          <div className="group border border-gray-600 rounded-lg p-4 bg-gray-900/50 backdrop-blur-sm transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:border-white/50 lg:col-span-3 flex flex-col">
+          <div className="group border border-gray-600 rounded-lg p-4 bg-gray-900/50 backdrop-blur-sm transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:border-white/50 md:col-span-3 flex flex-col">
             <h2 className="text-xl font-bold text-purple-400 mb-3 font-mono">connect</h2>
             <div className="text-gray-300 font-mono text-sm flex-1">
-                              <div className="flex flex-col lg:flex-row justify-center items-center gap-8">
+              <div className="flex flex-col md:flex-row justify-center items-center gap-8">
                 {/* Contact Info */}
                 <div className="text-center">
                   <p className="text-white mb-2">Get in touch:</p>
@@ -187,8 +202,8 @@ export default function Portfolio() {
                   </p>
                 </div>
 
-                                  {/* Divider */}
-                  <div className="hidden lg:block w-px h-12 bg-gray-600"></div>
+                {/* Divider */}
+                <div className="hidden md:block w-px h-12 bg-gray-600"></div>
 
                 {/* Social Links */}
                 <div className="text-center">
