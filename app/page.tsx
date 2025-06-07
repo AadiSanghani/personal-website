@@ -6,7 +6,7 @@ import { GlowCapture, Glow } from "@codaworks/react-glow"
 
 export default function Portfolio() {
   return (
-    <div className="h-screen bg-[#1a1a1a] relative overflow-auto flex flex-col">
+    <div className="h-screen bg-black relative overflow-auto flex flex-col">
       {/* Polka dot background */}
       <div
         className="absolute inset-0 opacity-10"
