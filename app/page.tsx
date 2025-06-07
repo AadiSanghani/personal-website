@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image"
 import Link from "next/link"
-import { FileText, Download } from "lucide-react"
+import { FileText, Download, MapPin } from "lucide-react"
 import { GlowCapture, Glow } from "@codaworks/react-glow"
 
 export default function Portfolio() {
@@ -27,6 +27,11 @@ export default function Portfolio() {
           <div>
             <h1 className="text-3xl font-bold text-white font-mono">Aadi Sanghani</h1>
             <p className="text-cyan-400 font-mono">Software Engineer & Technology Enthusiast</p>
+            {/* Location */}
+            <div className="flex items-center gap-2 text-gray-300 font-mono mt-1">
+              <MapPin className="w-4 h-4 text-cyan-400" />
+              <span className="text-sm">Toronto, ON</span>
+            </div>
           </div>
         </div>
 
