@@ -81,7 +81,8 @@ export default function Portfolio() {
                 </div>
                 <div>
                   <h3 className="text-white text-sm font-semibold">eBay</h3>
-                  <p className="text-xs text-cyan-400 mb-1">Software Engineer • May 2025-Aug 2025</p>
+                  <p className="text-xs text-cyan-400 mb-1">Software Engineer</p>
+                  <p className="text-xs text-gray-500 mb-1">May 2025 - Aug 2025</p>
                   <p className="text-xs">Developed scalable web applications using React and Node.js.</p>
                 </div>
               </div>
@@ -101,7 +102,8 @@ export default function Portfolio() {
                 </div>
                 <div>
                   <h3 className="text-white text-sm font-semibold">Shopify</h3>
-                  <p className="text-xs text-cyan-400 mb-1">Software Engineer • Sept 2024 - April 2025</p>
+                  <p className="text-xs text-cyan-400 mb-1">Software Engineer</p>
+                  <p className="text-xs text-gray-500 mb-1">Sept 2024 - April 2025</p>
                   <p className="text-xs">Developed scalable web applications using React and Node.js.</p>
                 </div>
               </div>
@@ -121,7 +123,8 @@ export default function Portfolio() {
                 </div>
                 <div>
                   <h3 className="text-white text-sm font-semibold">Nasdaq</h3>
-                  <p className="text-xs text-cyan-400 mb-1">Software Engineer • May 2024 - Aug 2024</p>
+                  <p className="text-xs text-cyan-400 mb-1">Software Engineer</p>
+                  <p className="text-xs text-gray-500 mb-1">May 2024 - Aug 2024</p>
                   <p className="text-xs">Developed scalable web applications using React and Node.js.</p>
                 </div>
               </div>
@@ -141,7 +144,8 @@ export default function Portfolio() {
                 </div>
                 <div>
                   <h3 className="text-white text-sm font-semibold">Interac</h3>
-                  <p className="text-xs text-cyan-400 mb-1">Software Engineer • May 2023 - Aug 2023</p>
+                  <p className="text-xs text-cyan-400 mb-1">Software Engineer</p>
+                  <p className="text-xs text-gray-500 mb-1">May 2023 - Aug 2023</p>
                   <p className="text-xs">Developed scalable web applications using React and Node.js.</p>
                 </div>
               </div>
@@ -161,7 +165,8 @@ export default function Portfolio() {
                 </div>
                 <div>
                   <h3 className="text-white text-sm font-semibold">Canadian Tire</h3>
-                  <p className="text-xs text-cyan-400 mb-1">Software Engineer • May 2022 - Aug 2022</p>
+                  <p className="text-xs text-cyan-400 mb-1">Software Engineer</p>
+                  <p className="text-xs text-gray-500 mb-1">May 2022 - Aug 2022</p>
                   <p className="text-xs">Developed scalable web applications using React and Node.js.</p>
                 </div>
               </div>
