@@ -89,7 +89,7 @@ export default function Portfolio() {
                         <h3 className="text-white text-sm font-semibold">eBay</h3>
                         <p className="text-xs text-cyan-400 mb-1">Software Engineer</p>
                         <p className="text-xs text-gray-500 mb-1">May 2025 - Aug 2025</p>
-                        <p className="text-xs">Developed scalable web applications using React and Node.js.</p>
+                        <p className="text-xs">Part of the Recommendation and Insights team, working on the Recommendation Engine and the Insights Dashboard.</p>
                       </div>
                     </div>
                   </Glow>
@@ -112,7 +112,8 @@ export default function Portfolio() {
                         <h3 className="text-white text-sm font-semibold">Shopify</h3>
                         <p className="text-xs text-cyan-400 mb-1">Software Engineer</p>
                         <p className="text-xs text-gray-500 mb-1">Sept 2024 - April 2025</p>
-                        <p className="text-xs">Developed scalable web applications using React and Node.js.</p>
+                        <p className="text-xs">Scaled MySQL infrastructure 4x to 
+                          handle 100M+ checkouts by leading Vitess-based re-sharding, automating 50+ manual steps to save days of work</p>
                       </div>
                     </div>
                   </Glow>
@@ -135,7 +136,7 @@ export default function Portfolio() {
                         <h3 className="text-white text-sm font-semibold">Nasdaq</h3>
                         <p className="text-xs text-cyan-400 mb-1">Software Engineer</p>
                         <p className="text-xs text-gray-500 mb-1">May 2024 - Aug 2024</p>
-                        <p className="text-xs">Developed scalable web applications using React and Node.js.</p>
+                        <p className="text-xs">Built an auditing system for a real-time clearing platform handling 50M+ option contracts, while supporting AI-driven productivity analysis.</p>
                       </div>
                     </div>
                   </Glow>
@@ -158,7 +159,7 @@ export default function Portfolio() {
                         <h3 className="text-white text-sm font-semibold">Interac</h3>
                         <p className="text-xs text-cyan-400 mb-1">Software Engineer</p>
                         <p className="text-xs text-gray-500 mb-1">May 2023 - Aug 2023</p>
-                        <p className="text-xs">Developed scalable web applications using React and Node.js.</p>
+                        <p className="text-xs">Developed an Anti-Money Laundering (AML) API for E-Transfers, now serving 80+ financial institutions, and improved median response time of API by 8%.</p>
                       </div>
                     </div>
                   </Glow>
@@ -181,7 +182,8 @@ export default function Portfolio() {
                         <h3 className="text-white text-sm font-semibold">Canadian Tire Financial Services</h3>
                         <p className="text-xs text-cyan-400 mb-1">Software Engineer</p>
                         <p className="text-xs text-gray-500 mb-1">May 2022 - Aug 2022</p>
-                        <p className="text-xs">Developed scalable web applications using React and Node.js.</p>
+                        <p className="text-xs">Developed an internal tool that streamlined access to testing accounts, 
+                          and improving retrieval time by 30%, while optimizing database performance.</p>
                       </div>
                     </div>
                   </Glow>
