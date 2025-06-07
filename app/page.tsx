@@ -88,7 +88,7 @@ export default function Portfolio() {
                       <div>
                         <h3 className="text-white text-sm font-semibold">eBay</h3>
                         <p className="text-xs text-cyan-400 mb-1">Software Engineer</p>
-                        <p className="text-xs text-gray-500 mb-1">May 2025 - Aug 2025</p>
+                        <p className="text-xs text-gray-500 mb-1">May 2025 - Present</p>
                         <p className="text-xs">Part of the Recommendation and Insights team, working on the Recommendation Engine and the Insights Dashboard.</p>
                       </div>
                     </div>
