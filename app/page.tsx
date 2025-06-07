@@ -42,13 +42,16 @@ export default function Portfolio() {
             <h2 className="text-xl font-bold text-purple-400 mb-2 font-mono">about</h2>
             <div className="text-gray-300 font-mono text-sm leading-relaxed flex-1">
               <p>
-                Hi! I'm a passionate Software Engineer with experience in full-stack development, cloud technologies,
-                and building scalable applications.
+              Hey! I'm Aadi Sanghani 👋 and I'm deeply interested in infrastructure and platform engineering 🛠️. 
+              I'm passionate about building scalable systems and enjoy tackling complex problems that drive real impact.
               </p>
               <br />
               <p>
-                Currently focused on React, Node.js, Python, and cloud platforms. Always eager to learn and take on new
-                challenges!
+              I'm a Computer Science student ('26) at McMaster University. Outside of school, you can find me hiking 🥾, volunteering 🙌, or playing basketball 🏀.
+              </p>
+              <br />
+              <p>
+              I'm currently looking for new-grad opportunities in infrastructure and platform engineering for 2026.
               </p>
             </div>
           </div>
