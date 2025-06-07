@@ -61,7 +61,7 @@ export default function Portfolio() {
           <div className="flex justify-between items-center mb-2">
                 <h2 className="text-xl font-bold text-purple-400 font-mono">experience</h2>
                 <Link
-                  href="/resume.pdf"
+                  href="https://drive.google.com/file/d/13hjqcUmS-lTWuaY-Wro3b8MRiGJS6Mi0/view?usp=sharing"
                   target="_blank"
                   className="group/btn relative inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 py-2 px-4 rounded-lg font-semibold text-white shadow-lg hover:shadow-xl hover:shadow-purple-500/25 transform hover:scale-105 text-sm"
                 >
