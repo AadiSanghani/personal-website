@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image"
 import Link from "next/link"
 import { FileText, Download } from "lucide-react"
@@ -33,7 +34,7 @@ export default function Portfolio() {
         </div>
 
         {/* Main Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 flex-1">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 flex-1">
           {/* About Section */}
           <div className="group border border-gray-600 rounded-lg p-4 bg-gray-900/50 backdrop-blur-sm transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:border-white/50 flex flex-col">
             <h2 className="text-xl font-bold text-purple-400 mb-2 font-mono">about</h2>
@@ -51,7 +52,7 @@ export default function Portfolio() {
           </div>
 
           {/* Experience Section - Spans two columns */}
-          <div className="group border border-gray-600 rounded-lg p-4 bg-gray-900/50 backdrop-blur-sm transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:border-white/50 md:col-span-2 flex flex-col">
+          <div className="group border border-gray-600 rounded-lg p-4 bg-gray-900/50 backdrop-blur-sm transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:border-white/50 lg:col-span-2 flex flex-col">
           <div className="flex justify-between items-center mb-2">
                 <h2 className="text-xl font-bold text-purple-400 font-mono">experience</h2>
                 <Link
@@ -64,7 +65,7 @@ export default function Portfolio() {
                   <Download className="w-3 h-3 opacity-70 group-hover/btn:opacity-100 transition-opacity" />
                 </Link>
               </div>
-            <div className="text-gray-300 font-mono text-sm flex-1 grid grid-cols-1 md:grid-cols-2 gap-3 overflow-y-auto pr-1 custom-scrollbar">
+            <div className="text-gray-300 font-mono text-sm flex-1 grid grid-cols-1 lg:grid-cols-2 gap-3 overflow-y-auto pr-1 custom-scrollbar">
               
               {/* eBay */}
               <div className="flex gap-3 bg-white/5 p-3 rounded-lg hover:bg-purple-500/10 transition-all duration-300 border border-transparent hover:border-purple-500/30">
@@ -174,10 +175,10 @@ export default function Portfolio() {
           </div>
 
           {/* Connect Section */}
-          <div className="group border border-gray-600 rounded-lg p-4 bg-gray-900/50 backdrop-blur-sm transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:border-white/50 md:col-span-3 flex flex-col">
+          <div className="group border border-gray-600 rounded-lg p-4 bg-gray-900/50 backdrop-blur-sm transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:border-white/50 lg:col-span-3 flex flex-col">
             <h2 className="text-xl font-bold text-purple-400 mb-3 font-mono">connect</h2>
             <div className="text-gray-300 font-mono text-sm flex-1">
-              <div className="flex flex-col md:flex-row justify-center items-center gap-8">
+                              <div className="flex flex-col lg:flex-row justify-center items-center gap-8">
                 {/* Contact Info */}
                 <div className="text-center">
                   <p className="text-white mb-2">Get in touch:</p>
@@ -186,8 +187,8 @@ export default function Portfolio() {
                   </p>
                 </div>
 
-                {/* Divider */}
-                <div className="hidden md:block w-px h-12 bg-gray-600"></div>
+                                  {/* Divider */}
+                  <div className="hidden lg:block w-px h-12 bg-gray-600"></div>
 
                 {/* Social Links */}
                 <div className="text-center">
