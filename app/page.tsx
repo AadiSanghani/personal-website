@@ -196,15 +196,15 @@ export default function Portfolio() {
           </div>
 
           {/* Connect Section */}
-          <div className="group border border-gray-600 rounded-lg p-4 bg-gray-900/50 backdrop-blur-sm transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:border-white/50 md:col-span-3 flex flex-col">
+          <div className="group border border-gray-600 rounded-lg py-3 px-4 bg-gray-900/50 backdrop-blur-sm transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:border-white/50 md:col-span-3 flex flex-col h-32">
             <h2 className="text-xl font-bold text-purple-400 mb-3 font-mono">connect</h2>
-            <div className="text-gray-300 font-mono text-sm flex-1">
+            <div className="text-gray-300 font-mono text-sm flex-1 flex items-end justify-center">
               <div className="flex flex-col md:flex-row justify-center items-center gap-8">
                 {/* Contact Info */}
                 <div className="text-center">
-                  <p className="text-white mb-2">Get in touch:</p>
+                  <p className="text-white mb-2">get in touch:</p>
                   <p className="text-cyan-400 hover:text-cyan-300 transition-colors text-lg">
-                    aadi.sanghani@email.com
+                    aadisanghani3@gmail.com
                   </p>
                 </div>
 
@@ -213,7 +213,7 @@ export default function Portfolio() {
 
                 {/* Social Links */}
                 <div className="text-center">
-                  <p className="text-white mb-2">Find me on:</p>
+                  <p className="text-white mb-2">find me on:</p>
                   <div className="flex gap-6 justify-center">
                     <Link
                       href="https://www.linkedin.com/in/aadisanghani/"
@@ -222,10 +222,10 @@ export default function Portfolio() {
                     >
                       linkedin
                     </Link>
-                    <Link href="#" className="text-cyan-400 hover:text-cyan-300 transition-colors text-lg">
+                    <Link href="https://github.com/aadisanghani" target="_blank" className="text-cyan-400 hover:text-cyan-300 transition-colors text-lg">
                       github
                     </Link>
-                    <Link href="#" className="text-cyan-400 hover:text-cyan-300 transition-colors text-lg">
+                    <Link href="https://x.com/aadisanghani_" target="_blank" className="text-cyan-400 hover:text-cyan-300 transition-colors text-lg">
                       twitter
                     </Link>
                   </div>
