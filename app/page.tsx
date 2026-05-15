@@ -4,6 +4,111 @@ import Link from "next/link"
 import { FileText, Download, MapPin } from "lucide-react"
 import { GlowCapture, Glow } from "@codaworks/react-glow"
 
+const experiences = [
+  {
+    company: "Shopify",
+    role: "Software Engineer",
+    date: "Dec 2025 - Present",
+    description: "Distributed Databases",
+    logo: "/shopify.svg",
+    logoAlt: "Shopify Logo",
+    logoSize: 50,
+    glowColor: "rgb(176, 250, 87)",
+  },
+  {
+    company: "eBay",
+    role: "Software Engineer",
+    date: "May 2025 - Present",
+    description:
+      "Part of the Recommendation and Insights team, working on the Recommendation Engine and the Insights Dashboard.",
+    logo: "/ebay.svg",
+    logoAlt: "eBay Logo",
+    logoSize: 60,
+    glowColor: "rgb(255, 196, 0)",
+  },
+  {
+    company: "Shopify",
+    role: "Software Engineer",
+    date: "Sept 2024 - April 2025",
+    description:
+      "Scaled MySQL infrastructure 4x to handle 100M+ checkouts by leading Vitess-based re-sharding, automating 50+ manual steps to save days of work",
+    logo: "/shopify.svg",
+    logoAlt: "Shopify Logo",
+    logoSize: 50,
+    glowColor: "rgb(176, 250, 87)",
+  },
+  {
+    company: "Nasdaq",
+    role: "Software Engineer",
+    date: "May 2024 - Aug 2024",
+    description:
+      "Built an auditing system for a real-time clearing platform handling 50M+ option contracts, while supporting AI-driven productivity analysis.",
+    logo: "/nasdaq.svg",
+    logoAlt: "Nasdaq Logo",
+    logoSize: 50,
+    glowColor: "rgb(0, 150, 255)",
+  },
+  {
+    company: "Interac",
+    role: "Software Engineer",
+    date: "May 2023 - Aug 2023",
+    description:
+      "Developed an Anti-Money Laundering (AML) API for E-Transfers, now serving 80+ financial institutions, and improved median response time of API by 8%.",
+    logo: "/interac.svg",
+    logoAlt: "Interac Logo",
+    logoSize: 50,
+    glowColor: "rgb(255, 100, 50)",
+  },
+  {
+    company: "Canadian Tire Financial Services",
+    role: "Software Engineer",
+    date: "May 2022 - Aug 2022",
+    description:
+      "Developed an internal tool that streamlined access to testing accounts, and improving retrieval time by 30%, while optimizing database performance.",
+    logo: "/ctfs.svg",
+    logoAlt: "Canadian Tire Logo",
+    logoSize: 40,
+    glowColor: "rgb(220, 30, 37)",
+  },
+]
+
+const twoColumnExperiences = [
+  experiences[0],
+  experiences[3],
+  experiences[1],
+  experiences[4],
+  experiences[2],
+  experiences[5],
+]
+
+function ExperienceCard({ experience }: { experience: (typeof experiences)[number] }) {
+  return (
+    <div className="h-full">
+      <Glow color={experience.glowColor}>
+        <div className="flex min-h-36 md:h-52 gap-3 bg-white/5 p-3 rounded-lg transition-all duration-300 border border-transparent glow:bg-glow/10 glow:border-glow/30">
+          <div className="flex-shrink-0">
+            <div className="w-16 h-16 bg-purple-500/20 rounded-md flex items-center justify-center glow:bg-glow/20">
+              <Image
+                src={experience.logo}
+                alt={experience.logoAlt}
+                width={experience.logoSize}
+                height={experience.logoSize}
+                className="opacity-90"
+              />
+            </div>
+          </div>
+          <div>
+            <h3 className="text-white text-sm font-semibold">{experience.company}</h3>
+            <p className="text-xs text-cyan-400 mb-1">{experience.role}</p>
+            <p className="text-xs text-gray-500 mb-1">{experience.date}</p>
+            <p className="text-xs">{experience.description}</p>
+          </div>
+        </div>
+      </Glow>
+    </div>
+  )
+}
+
 export default function Portfolio() {
   return (
     <div className="h-screen bg-black relative overflow-auto flex flex-col">
@@ -20,20 +125,20 @@ export default function Portfolio() {
         {/* Header */}
         <div className="flex w-full items-center justify-center mb-6 text-center">
           <div className="inline-flex items-center justify-center gap-5">
-          <div className="relative">
-            <div className="w-[100px] h-[100px] rounded-full bg-gradient-to-br from-purple-500/30 to-cyan-500/30 backdrop-blur-sm flex items-center justify-center p-1 shadow-lg">
-              <Image src="/memoji.png" alt="Bitmoji" width={100} height={100} className="rounded-full" />
+            <div className="relative">
+              <div className="w-[100px] h-[100px] rounded-full bg-gradient-to-br from-purple-500/30 to-cyan-500/30 backdrop-blur-sm flex items-center justify-center p-1 shadow-lg">
+                <Image src="/memoji.png" alt="Bitmoji" width={100} height={100} className="rounded-full" />
+              </div>
             </div>
-          </div>
-          <div>
-            <h1 className="text-3xl font-bold text-white font-mono">Aadi Sanghani</h1>
-            <p className="text-cyan-400 font-mono">Software Engineer & Technology Enthusiast</p>
-            {/* Location */}
-            <div className="flex items-center justify-center gap-2 text-gray-300 font-mono mt-1">
-              <MapPin className="w-4 h-4 text-cyan-400" />
-              <span className="text-sm">Toronto, ON</span>
+            <div>
+              <h1 className="text-3xl font-bold text-white font-mono">Aadi Sanghani</h1>
+              <p className="text-cyan-400 font-mono">Software Engineer & Technology Enthusiast</p>
+              {/* Location */}
+              <div className="flex items-center justify-center gap-2 text-gray-300 font-mono mt-1">
+                <MapPin className="w-4 h-4 text-cyan-400" />
+                <span className="text-sm">Toronto, ON</span>
+              </div>
             </div>
-          </div>
           </div>
         </div>
 
@@ -66,160 +171,29 @@ export default function Portfolio() {
 
           {/* Experience Section - Spans two columns */}
           <div className="group border border-gray-600 rounded-lg p-3 bg-gray-900/50 backdrop-blur-sm transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:border-white/50 md:col-span-2 flex flex-col">
-          <div className="flex justify-between items-center mb-2">
-                <h2 className="text-xl font-bold text-purple-400 font-mono">experience</h2>
-                <Link
-                  href="https://drive.google.com/file/d/1wqtypD5wzVTZLFqZ60fDOS4OEb2vqXEm/view?usp=sharing"
-                  target="_blank"
-                  className="group/btn relative inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 py-2 px-4 rounded-lg font-semibold text-white shadow-lg hover:shadow-xl hover:shadow-purple-500/25 transform hover:scale-105 text-sm"
-                >
-                  <FileText className="w-4 h-4" />
-                  <span>Resume</span>
-                  <Download className="w-3 h-3 opacity-70 group-hover/btn:opacity-100 transition-opacity" />
-                </Link>
-              </div>
+            <div className="flex justify-between items-center mb-2">
+              <h2 className="text-xl font-bold text-purple-400 font-mono">experience</h2>
+              <Link
+                href="https://drive.google.com/file/d/1wqtypD5wzVTZLFqZ60fDOS4OEb2vqXEm/view?usp=sharing"
+                target="_blank"
+                className="group/btn relative inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 py-2 px-4 rounded-lg font-semibold text-white shadow-lg hover:shadow-xl hover:shadow-purple-500/25 transform hover:scale-105 text-sm"
+              >
+                <FileText className="w-4 h-4" />
+                <span>Resume</span>
+                <Download className="w-3 h-3 opacity-70 group-hover/btn:opacity-100 transition-opacity" />
+              </Link>
+            </div>
             <div className="text-gray-300 font-mono text-sm flex-1 overflow-y-auto pr-1 custom-scrollbar">
               <GlowCapture>
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 auto-rows-fr items-stretch gap-2.5 lg:gap-3">
-                  {/* Shopify */}
-                  <Glow color="rgb(176, 250, 87)">
-                    <div className="flex h-full min-h-32 xl:min-h-52 gap-2.5 bg-white/5 p-2.5 rounded-lg transition-all duration-300 border border-transparent glow:bg-glow/10 glow:border-glow/30">
-                      <div className="flex-shrink-0">
-                        <div className="w-14 h-14 bg-purple-500/20 rounded-md flex items-center justify-center glow:bg-glow/20">
-                          <Image
-                            src="/shopify.svg"
-                            alt="shopify Logo"
-                            width={50}
-                            height={50}
-                            className="opacity-90"
-                          />
-                        </div>
-                      </div>
-                      <div>
-                        <h3 className="text-white text-sm font-semibold">Shopify</h3>
-                        <p className="text-xs text-cyan-400 mb-1">Software Engineer</p>
-                        <p className="text-xs text-gray-500 mb-1">Dec 2025 - Present</p>
-                        <p className="text-xs">Distributed Databases</p>
-                      </div>
-                    </div>
-                  </Glow>
-                  
-                  {/* eBay */}
-                  <Glow color="rgb(255, 196, 0)">
-                    <div className="flex h-full min-h-32 xl:min-h-52 gap-2.5 bg-white/5 p-2.5 rounded-lg transition-all duration-300 border border-transparent glow:bg-glow/10 glow:border-glow/30">
-                      <div className="flex-shrink-0">
-                        <div className="w-14 h-14 bg-purple-500/20 rounded-md flex items-center justify-center glow:bg-glow/20">
-                          <Image
-                            src="/ebay.svg"
-                            alt="Company 1 Logo"
-                            width={60}
-                            height={60}
-                            className="opacity-90"
-                          />
-                        </div>
-                      </div>
-                      <div>
-                        <h3 className="text-white text-sm font-semibold">eBay</h3>
-                        <p className="text-xs text-cyan-400 mb-1">Software Engineer</p>
-                        <p className="text-xs text-gray-500 mb-1">May 2025 - Present</p>
-                        <p className="text-xs">Part of the Recommendation and Insights team, working on the Recommendation Engine and the Insights Dashboard.</p>
-                      </div>
-                    </div>
-                  </Glow>
-
-                  {/* Shopify */}
-                  <Glow color="rgb(176, 250, 87)">
-                    <div className="flex h-full min-h-32 xl:min-h-52 gap-2.5 bg-white/5 p-2.5 rounded-lg transition-all duration-300 border border-transparent glow:bg-glow/10 glow:border-glow/30">
-                      <div className="flex-shrink-0">
-                        <div className="w-14 h-14 bg-purple-500/20 rounded-md flex items-center justify-center glow:bg-glow/20">
-                          <Image
-                            src="/shopify.svg"
-                            alt="shopify Logo"
-                            width={50}
-                            height={50}
-                            className="opacity-90"
-                          />
-                        </div>
-                      </div>
-                      <div>
-                        <h3 className="text-white text-sm font-semibold">Shopify</h3>
-                        <p className="text-xs text-cyan-400 mb-1">Software Engineer</p>
-                        <p className="text-xs text-gray-500 mb-1">Sept 2024 - April 2025</p>
-                        <p className="text-xs">Scaled MySQL infrastructure 4x to 
-                          handle 100M+ checkouts by leading Vitess-based re-sharding, automating 50+ manual steps to save days of work</p>
-                      </div>
-                    </div>
-                  </Glow>
-
-                  {/* Nasdaq */}
-                  <Glow color="rgb(0, 150, 255)">
-                    <div className="flex h-full min-h-32 xl:min-h-52 gap-2.5 bg-white/5 p-2.5 rounded-lg transition-all duration-300 border border-transparent glow:bg-glow/10 glow:border-glow/30">
-                      <div className="flex-shrink-0">
-                        <div className="w-14 h-14 bg-purple-500/20 rounded-md flex items-center justify-center glow:bg-glow/20">
-                          <Image
-                            src="/nasdaq.svg"
-                            alt="Nasdaq Logo"
-                            width={50}
-                            height={50}
-                            className="opacity-90"
-                          />
-                        </div>
-                      </div>
-                      <div>
-                        <h3 className="text-white text-sm font-semibold">Nasdaq</h3>
-                        <p className="text-xs text-cyan-400 mb-1">Software Engineer</p>
-                        <p className="text-xs text-gray-500 mb-1">May 2024 - Aug 2024</p>
-                        <p className="text-xs">Built an auditing system for a real-time clearing platform handling 50M+ option contracts, while supporting AI-driven productivity analysis.</p>
-                      </div>
-                    </div>
-                  </Glow>
-
-                  {/* Interac */}
-                  <Glow color="rgb(255, 100, 50)">
-                    <div className="flex h-full min-h-32 xl:min-h-52 gap-2.5 bg-white/5 p-2.5 rounded-lg transition-all duration-300 border border-transparent glow:bg-glow/10 glow:border-glow/30">
-                      <div className="flex-shrink-0">
-                        <div className="w-14 h-14 bg-purple-500/20 rounded-md flex items-center justify-center glow:bg-glow/20">
-                          <Image
-                            src="/interac.svg"
-                            alt="Interac Logo"
-                            width={50}
-                            height={50}
-                            className="opacity-90"
-                          />
-                        </div>
-                      </div>
-                      <div>
-                        <h3 className="text-white text-sm font-semibold">Interac</h3>
-                        <p className="text-xs text-cyan-400 mb-1">Software Engineer</p>
-                        <p className="text-xs text-gray-500 mb-1">May 2023 - Aug 2023</p>
-                        <p className="text-xs">Developed an Anti-Money Laundering (AML) API for E-Transfers, now serving 80+ financial institutions, and improved median response time of API by 8%.</p>
-                      </div>
-                    </div>
-                  </Glow>
-
-                  {/* Canadian Tire */}
-                  <Glow color="rgb(220, 30, 37)">
-                    <div className="flex h-full min-h-32 xl:min-h-52 gap-2.5 bg-white/5 p-2.5 rounded-lg transition-all duration-300 border border-transparent glow:bg-glow/10 glow:border-glow/30">
-                      <div className="flex-shrink-0">
-                        <div className="w-14 h-14 bg-purple-500/20 rounded-md flex items-center justify-center glow:bg-glow/20">
-                          <Image
-                            src="/ctfs.svg"
-                            alt="Canadian Tire Logo"
-                            width={40}
-                            height={40}
-                            className="opacity-90"
-                          />
-                        </div>
-                      </div>
-                      <div>
-                        <h3 className="text-white text-sm font-semibold">Canadian Tire Financial Services</h3>
-                        <p className="text-xs text-cyan-400 mb-1">Software Engineer</p>
-                        <p className="text-xs text-gray-500 mb-1">May 2022 - Aug 2022</p>
-                        <p className="text-xs">Developed an internal tool that streamlined access to testing accounts, 
-                          and improving retrieval time by 30%, while optimizing database performance.</p>
-                      </div>
-                    </div>
-                  </Glow>
+                <div className="grid grid-cols-1 gap-3 md:hidden">
+                  {experiences.map((experience) => (
+                    <ExperienceCard key={`${experience.company}-${experience.date}`} experience={experience} />
+                  ))}
+                </div>
+                <div className="hidden md:grid md:grid-cols-2 items-stretch gap-3">
+                  {twoColumnExperiences.map((experience) => (
+                    <ExperienceCard key={`${experience.company}-${experience.date}`} experience={experience} />
+                  ))}
                 </div>
               </GlowCapture>
             </div>
