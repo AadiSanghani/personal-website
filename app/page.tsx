@@ -49,7 +49,7 @@ export default function Portfolio() {
               <p>
               I'm a Computer Science student ('26) at McMaster University. Outside of school, you can find me hiking 🥾, volunteering 🙌, or playing basketball 🏀.
               </p>
-              <br />
+              {/* <br />
               <div className="mt-3 border-l-4 border-gradient-to-b from-purple-400 to-cyan-400 border-l-purple-400 pl-4 py-2 bg-gradient-to-r from-purple-500/10 to-transparent">
                 <div className="flex items-center gap-2 mb-1">
                   <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
@@ -58,7 +58,7 @@ export default function Portfolio() {
                 <p className="text-white font-bold text-sm">
                   I'm currently looking for new-grad opportunities in infrastructure engineering for 2026.
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
 
