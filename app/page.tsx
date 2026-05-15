@@ -63,7 +63,7 @@ export default function Portfolio() {
           </div>
 
           {/* Experience Section - Spans two columns */}
-          <div className="group border border-gray-600 rounded-lg p-4 bg-gray-900/50 backdrop-blur-sm transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:border-white/50 md:col-span-2 flex flex-col">
+          <div className="group border border-gray-600 rounded-lg p-3 bg-gray-900/50 backdrop-blur-sm transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:border-white/50 md:col-span-2 flex flex-col">
           <div className="flex justify-between items-center mb-2">
                 <h2 className="text-xl font-bold text-purple-400 font-mono">experience</h2>
                 <Link
@@ -78,13 +78,35 @@ export default function Portfolio() {
               </div>
             <div className="text-gray-300 font-mono text-sm flex-1 overflow-y-auto pr-1 custom-scrollbar">
               <GlowCapture>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 auto-rows-fr items-stretch gap-2.5 lg:gap-3">
+                  {/* Shopify */}
+                  <Glow color="rgb(176, 250, 87)">
+                    <div className="flex h-full min-h-32 xl:min-h-52 gap-2.5 bg-white/5 p-2.5 rounded-lg transition-all duration-300 border border-transparent glow:bg-glow/10 glow:border-glow/30">
+                      <div className="flex-shrink-0">
+                        <div className="w-14 h-14 bg-purple-500/20 rounded-md flex items-center justify-center glow:bg-glow/20">
+                          <Image
+                            src="/shopify.svg"
+                            alt="shopify Logo"
+                            width={50}
+                            height={50}
+                            className="opacity-90"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-white text-sm font-semibold">Shopify</h3>
+                        <p className="text-xs text-cyan-400 mb-1">Software Engineer</p>
+                        <p className="text-xs text-gray-500 mb-1">Dec 2025 - Present</p>
+                        <p className="text-xs">Distributed Databases</p>
+                      </div>
+                    </div>
+                  </Glow>
                   
                   {/* eBay */}
                   <Glow color="rgb(255, 196, 0)">
-                    <div className="flex gap-3 bg-white/5 p-3 rounded-lg transition-all duration-300 border border-transparent glow:bg-glow/10 glow:border-glow/30">
+                    <div className="flex h-full min-h-32 xl:min-h-52 gap-2.5 bg-white/5 p-2.5 rounded-lg transition-all duration-300 border border-transparent glow:bg-glow/10 glow:border-glow/30">
                       <div className="flex-shrink-0">
-                        <div className="w-16 h-16 bg-purple-500/20 rounded-md flex items-center justify-center glow:bg-glow/20">
+                        <div className="w-14 h-14 bg-purple-500/20 rounded-md flex items-center justify-center glow:bg-glow/20">
                           <Image
                             src="/ebay.svg"
                             alt="Company 1 Logo"
@@ -105,9 +127,9 @@ export default function Portfolio() {
 
                   {/* Shopify */}
                   <Glow color="rgb(176, 250, 87)">
-                    <div className="flex gap-3 bg-white/5 p-3 rounded-lg transition-all duration-300 border border-transparent glow:bg-glow/10 glow:border-glow/30">
+                    <div className="flex h-full min-h-32 xl:min-h-52 gap-2.5 bg-white/5 p-2.5 rounded-lg transition-all duration-300 border border-transparent glow:bg-glow/10 glow:border-glow/30">
                       <div className="flex-shrink-0">
-                        <div className="w-16 h-16 bg-purple-500/20 rounded-md flex items-center justify-center glow:bg-glow/20">
+                        <div className="w-14 h-14 bg-purple-500/20 rounded-md flex items-center justify-center glow:bg-glow/20">
                           <Image
                             src="/shopify.svg"
                             alt="shopify Logo"
@@ -129,9 +151,9 @@ export default function Portfolio() {
 
                   {/* Nasdaq */}
                   <Glow color="rgb(0, 150, 255)">
-                    <div className="flex gap-3 bg-white/5 p-3 rounded-lg transition-all duration-300 border border-transparent glow:bg-glow/10 glow:border-glow/30">
+                    <div className="flex h-full min-h-32 xl:min-h-52 gap-2.5 bg-white/5 p-2.5 rounded-lg transition-all duration-300 border border-transparent glow:bg-glow/10 glow:border-glow/30">
                       <div className="flex-shrink-0">
-                        <div className="w-16 h-16 bg-purple-500/20 rounded-md flex items-center justify-center glow:bg-glow/20">
+                        <div className="w-14 h-14 bg-purple-500/20 rounded-md flex items-center justify-center glow:bg-glow/20">
                           <Image
                             src="/nasdaq.svg"
                             alt="Nasdaq Logo"
@@ -152,9 +174,9 @@ export default function Portfolio() {
 
                   {/* Interac */}
                   <Glow color="rgb(255, 100, 50)">
-                    <div className="flex gap-3 bg-white/5 p-3 rounded-lg transition-all duration-300 border border-transparent glow:bg-glow/10 glow:border-glow/30">
+                    <div className="flex h-full min-h-32 xl:min-h-52 gap-2.5 bg-white/5 p-2.5 rounded-lg transition-all duration-300 border border-transparent glow:bg-glow/10 glow:border-glow/30">
                       <div className="flex-shrink-0">
-                        <div className="w-16 h-16 bg-purple-500/20 rounded-md flex items-center justify-center glow:bg-glow/20">
+                        <div className="w-14 h-14 bg-purple-500/20 rounded-md flex items-center justify-center glow:bg-glow/20">
                           <Image
                             src="/interac.svg"
                             alt="Interac Logo"
@@ -175,9 +197,9 @@ export default function Portfolio() {
 
                   {/* Canadian Tire */}
                   <Glow color="rgb(220, 30, 37)">
-                    <div className="flex gap-3 bg-white/5 p-3 rounded-lg transition-all duration-300 border border-transparent glow:bg-glow/10 glow:border-glow/30">
+                    <div className="flex h-full min-h-32 xl:min-h-52 gap-2.5 bg-white/5 p-2.5 rounded-lg transition-all duration-300 border border-transparent glow:bg-glow/10 glow:border-glow/30">
                       <div className="flex-shrink-0">
-                        <div className="w-16 h-16 bg-purple-500/20 rounded-md flex items-center justify-center glow:bg-glow/20">
+                        <div className="w-14 h-14 bg-purple-500/20 rounded-md flex items-center justify-center glow:bg-glow/20">
                           <Image
                             src="/ctfs.svg"
                             alt="Canadian Tire Logo"
