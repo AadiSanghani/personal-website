@@ -18,20 +18,22 @@ export default function Portfolio() {
 
       <div className="relative z-10 container mx-auto px-4 py-6 flex flex-col h-full">
         {/* Header */}
-        <div className="flex items-center justify-center mb-6">
-        <div className="mr-5 relative">
+        <div className="flex w-full items-center justify-center mb-6 text-center">
+          <div className="inline-flex items-center justify-center gap-5">
+          <div className="relative">
             <div className="w-[100px] h-[100px] rounded-full bg-gradient-to-br from-purple-500/30 to-cyan-500/30 backdrop-blur-sm flex items-center justify-center p-1 shadow-lg">
               <Image src="/memoji.png" alt="Bitmoji" width={100} height={100} className="rounded-full" />
             </div>
-        </div>
+          </div>
           <div>
             <h1 className="text-3xl font-bold text-white font-mono">Aadi Sanghani</h1>
             <p className="text-cyan-400 font-mono">Software Engineer & Technology Enthusiast</p>
             {/* Location */}
-            <div className="flex items-center gap-2 text-gray-300 font-mono mt-1">
+            <div className="flex items-center justify-center gap-2 text-gray-300 font-mono mt-1">
               <MapPin className="w-4 h-4 text-cyan-400" />
               <span className="text-sm">Toronto, ON</span>
             </div>
+          </div>
           </div>
         </div>
 
