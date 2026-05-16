@@ -23,6 +23,16 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Single-viewport portfolio on laptop/desktop; mobile keeps natural document scroll */
+@media (min-width: 768px) {
+  html,
+  body {
+    height: 100%;
+    max-height: 100dvh;
+    overflow: hidden;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
